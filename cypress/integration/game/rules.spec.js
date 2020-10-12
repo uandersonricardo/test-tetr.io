@@ -95,4 +95,16 @@ context('Login', () => {
       expect(endCol).to.equal(9);
     });
   });
+
+  it('should lose', () => {
+    for (let i = 0; i < 200; i++) {
+      cy.get('body').type('{downarrow}');
+    }
+
+    cy.wait(500);
+
+    cy.get('.main').should('not.be.visible');
+    cy.get('.game').should('not.be.visible');
+    cy.get('.score').should('be.visible');
+  });
 });
