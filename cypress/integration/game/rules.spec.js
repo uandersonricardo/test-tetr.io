@@ -1,4 +1,4 @@
-context('Login', () => {
+context('Rules', () => {
   beforeEach(() => {
     cy.visit('https://uandersonricardo.github.io/tetr.io/');
     cy.get('.main > .play-button').click();
